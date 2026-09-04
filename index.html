@@ -50,6 +50,7 @@
       <li><a href="#foodcheck">Food checker</a></li>
       <li><a href="#bmi">BMI calculator</a></li>
       <li><a href="#calculator">Diet calculator</a></li>
+      <li><a href="#coach">Ask the coach</a></li>
     </ul>
     <a href="#calculator" class="nav__cta btn-magnetic">Calculate my diet</a>
     <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile">
@@ -62,6 +63,7 @@
   <a href="#foodcheck">Food checker</a>
   <a href="#bmi">BMI calculator</a>
   <a href="#calculator">Diet calculator</a>
+  <a href="#coach">Ask the coach</a>
   <a class="nav__mobile-cta" href="#calculator">Calculate my diet</a>
 </div>
 
@@ -75,7 +77,7 @@
   <div class="hero__inner">
 
     <div class="hero__text">
-      <p class="hero__eyebrow reveal-fade" style="--d:1"><span>Idlis and Frames presents</span></p>
+      <p class="hero__eyebrow reveal-fade" style="--d:1"><span>Body Craft presents</span></p>
 
       <h1 class="hero__title" id="heroTitle">
         <span class="hero__title-line" data-split>BODY CRAFT</span>
@@ -302,6 +304,62 @@
   </div>
 </section>
 
+
+<!-- ============ AI COACH ============ -->
+<section class="section section--ai" id="coach">
+  <div class="section__inner">
+    <div class="section__head reveal-up">
+      <span class="kicker">04 — Ask the coach</span>
+      <h2>Ask about food, diet or training</h2>
+      <p>Describe what you're working with — a meal you're planning, a training split, a food you're not sure about — and get a straight answer back.</p>
+    </div>
+
+    <div class="calc">
+      <form class="panel panel--form tilt-card reveal-up" id="aiForm" style="--d:1">
+        <div class="field">
+          <label for="aiTopic">Topic</label>
+          <select id="aiTopic">
+            <option value="both">Food, diet and training</option>
+            <option value="nutrition">Food and nutrition</option>
+            <option value="diet">Diet planning</option>
+            <option value="workout">Gym and workouts</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="aiPrompt">Your question</label>
+          <textarea id="aiPrompt" rows="5" maxlength="1000"
+            placeholder="e.g. I train 4 days a week and I'm vegetarian. What should a high-protein day of eating look like for me?"></textarea>
+          <span class="field-count"><span id="aiCount">0</span> / 1000</span>
+        </div>
+
+        <div class="chips" id="aiChips">
+          <button type="button" class="chip" data-fill="Build me a high-protein vegetarian day of meals at around 2,000 kcal.">High-protein veg day</button>
+          <button type="button" class="chip" data-fill="Write me a 4-day gym split for building muscle, with sets and reps.">4-day split</button>
+          <button type="button" class="chip" data-fill="What should I eat before and after an evening workout?">Pre and post workout</button>
+          <button type="button" class="chip" data-fill="Give me five cheap, high-protein foods I can buy in India.">Cheap protein</button>
+        </div>
+
+        <label class="check">
+          <input type="checkbox" id="aiUseStats" checked />
+          <span>Use my numbers from this page</span>
+        </label>
+
+        <button type="submit" class="btn btn--primary btn--block btn-magnetic" id="aiSubmit">Ask the coach</button>
+        <p class="field-hint">General guidance only — not medical or clinical advice.</p>
+      </form>
+
+      <div class="panel panel--result tilt-card reveal-up" id="aiResult" style="--d:2">
+        <div class="ai__answer" id="aiAnswer" role="status" aria-live="polite">
+          <div class="panel__placeholder">
+            <p>Ask a question and the answer appears here. The more detail you give — bodyweight, training days, what you don't eat — the more useful it is.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <!-- ============ FOOTER ============ -->
@@ -320,6 +378,7 @@
         <li><a href="#foodcheck">Food checker</a></li>
         <li><a href="#bmi">BMI calculator</a></li>
         <li><a href="#calculator">Diet calculator</a></li>
+        <li><a href="#coach">Ask the coach</a></li>
       </ul>
     </div>
     <div class="footer__bottom">
@@ -330,5 +389,6 @@
 </footer>
 
 <script src="app.js"></script>
+<script src="ai.js"></script>
 </body>
 </html>
