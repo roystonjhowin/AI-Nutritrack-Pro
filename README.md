@@ -24,11 +24,11 @@ The app combines everyday food tracking with an AI-powered assistant to make log
 
 ## Features
 
-- 🍽️ **Food & meal tracking** — log what you eat throughout the day
-- 🤖 **AI-powered assistance** — get smart, personalized nutrition suggestions
-- 📊 **Simple, clean interface** — no clutter, easy for anyone to use
-- 🌐 **Works in the browser** — no installation needed
-- ⚡ **Fast and lightweight** — built with a minimal, efficient stack
+-  **Food & meal tracking** — log what you eat throughout the day
+-  **AI-powered assistance** — get smart, personalized nutrition suggestions
+-  **Simple, clean interface** — no clutter, easy for anyone to use
+-  **Works in the browser** — no installation needed
+-  **Fast and lightweight** — built with a minimal, efficient stack
 
 > Have a feature to add or correct here? Feel free to edit this section to match the app as it evolves.
 
@@ -69,7 +69,7 @@ API_KEY=your_api_key_here
 PORT=3000
 ```
 
-> ⚠️ Never commit your `.env` file — it's already excluded via `.gitignore`.
+>  Never commit your `.env` file — it's already excluded via `.gitignore`.
 
 ### Running Locally
 
@@ -86,7 +86,7 @@ This project is deployed on **Vercel**. To deploy your own copy:
 1. Fork this repository
 2. Import the project into [Vercel](https://vercel.com/new)
 3. Add any required environment variables in the Vercel project settings
-4. Deploy 🚀
+4. Deploy 
 
 ## Contributing
 
