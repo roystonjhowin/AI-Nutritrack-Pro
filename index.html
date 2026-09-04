@@ -4,9 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>NutriTrack Pro</title>
-<meta name="description" content="NutriTrack Pro a nutrition and fitness tracking platform.It serves as a tool providing features such as Food Checker,BMI Calculator and Diet Calculator." />
+<meta name="description" content="NutriTrack Pro is a nutrition and fitness tracking platform with a Food Checker, BMI Calculator and Diet Calculator." />
 <link rel="icon" href="logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css" />
 </head>
@@ -24,7 +25,7 @@
     <div class="preloader__track"><div class="preloader__fill" id="preloaderFill"></div></div>
     <div class="preloader__meta">
       <span class="preloader__pct" id="preloaderPct">0%</span>
-      <span class="preloader__label">PREPARING YOUR SESSION</span>
+      <span class="preloader__label">Preparing your session</span>
     </div>
   </div>
 </div>
@@ -37,26 +38,31 @@
 
 <!-- ============ NAV ============ -->
 <nav class="nav" id="nav">
-  <div class="nav__brand">
-    <img src="logo.png" alt="Body Craft" class="nav__logo" />
-    <div class="nav__brandtext">
-      <span class="nav__title">BODY CRAFT</span>
-      <span class="nav__sub">NutriTrack Pro</span>
-    </div>
+  <div class="nav__inner">
+    <a class="nav__brand" href="#hero">
+      <img src="logo.png" alt="" class="nav__logo" />
+      <span class="nav__brandtext">
+        <span class="nav__title">BODY CRAFT</span>
+        <span class="nav__sub">NutriTrack Pro</span>
+      </span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="#foodcheck">Food checker</a></li>
+      <li><a href="#bmi">BMI calculator</a></li>
+      <li><a href="#calculator">Diet calculator</a></li>
+    </ul>
+    <a href="#calculator" class="nav__cta btn-magnetic">Calculate my diet</a>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-  <ul class="nav__links">
-    <li><a href="#foodcheck">Food Checker</a></li>
-    <li><a href="#bmi">BMI Calculator</a></li>
-    <li><a href="#calculator">Diet Calculator</a></li>
-  </ul>
-  <a href="#calculator" class="nav__cta btn-magnetic">Calculate My Diet</a>
-  <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav__mobile-overlay" id="navOverlay"></div>
 <div class="nav__mobile" id="navMobile">
-  <a href="#foodcheck">Food Checker</a>
-  <a href="#bmi">BMI Calculator</a>
-  <a href="#calculator">Diet Calculator</a>
+  <a href="#foodcheck">Food checker</a>
+  <a href="#bmi">BMI calculator</a>
+  <a href="#calculator">Diet calculator</a>
+  <a class="nav__mobile-cta" href="#calculator">Calculate my diet</a>
 </div>
 
 <!-- ============ HERO ============ -->
@@ -65,45 +71,42 @@
   <div class="hero__grain" aria-hidden="true"></div>
   <div class="hero__glow" aria-hidden="true"></div>
   <div class="hero__particles" id="heroParticles" aria-hidden="true"></div>
-  <div class="hero__floorline" aria-hidden="true"></div>
 
   <div class="hero__inner">
 
     <div class="hero__text">
+      <p class="hero__eyebrow reveal-fade" style="--d:1"><span>Body Craft presents</span></p>
 
       <h1 class="hero__title" id="heroTitle">
         <span class="hero__title-line" data-split>BODY CRAFT</span>
       </h1>
 
-      <p class="hero__tagline reveal-fade" style="--d:5">The Art of Health &amp; Fitness</p>
-
-      <div class="hero__divider reveal-fade" style="--d:6"><span></span>presents<span></span></div>
+      <p class="hero__tagline reveal-fade" style="--d:5">The art of health &amp; fitness</p>
 
       <h2 class="hero__platform reveal-fade" style="--d:7">Nutri<em>Track</em> Pro</h2>
-   
 
-      <div class="hero__credits reveal-fade" style="--d:9">
-        
-          </div>
-        </div>
-      </div>
+      <p class="hero__platformsub reveal-fade" style="--d:8">
+        Check what's on your plate, track your BMI, and get a daily calorie and macro
+        target built around how you actually train.
+      </p>
 
-      <div class="hero__actions reveal-fade" style="--d:10">
-        <a href="#calculator" class="btn btn--primary btn-magnetic">Calculate My Diet <span class="btn__arrow">→</span></a>
+      <div class="hero__actions reveal-fade" style="--d:9">
+        <a href="#calculator" class="btn btn--primary btn-magnetic">Calculate my diet</a>
+        <a href="#foodcheck" class="btn btn--ghost">Check a food</a>
       </div>
     </div>
 
     <div class="hero__visual reveal-fade" style="--d:4">
-      <div class="hero__visual-glow"></div>
+      <div class="hero__visual-glow" aria-hidden="true"></div>
       <div class="hero__visual-rings" aria-hidden="true"><span></span><span></span><span></span></div>
       <div class="hero__visual-tilt" id="heroTilt">
         <img src="trainer.png" alt="Body Craft head trainer demonstrating peak physical conditioning" class="hero__visual-img" />
       </div>
       <div class="hero__visual-badge hero__visual-badge--top">
-        <strong>NutriTrack Pro</strong><span>IT'S TIME FOR PROGRESS</span>
+        <strong>NutriTrack Pro</strong><span>It's time for progress</span>
       </div>
       <div class="hero__visual-badge hero__visual-badge--bottom">
-        <span>Stay Fit, Stay Healthy</span>
+        <span>Stay fit, stay healthy</span>
       </div>
     </div>
 
@@ -115,195 +118,214 @@
       <span>STRENGTH</span><span>•</span><span>NUTRITION</span><span>•</span><span>DISCIPLINE</span><span>•</span><span>TRANSFORMATION</span><span>•</span>
     </div>
   </div>
-
-  <div class="hero__scroll">
-  </div>
 </header>
+
+<main>
 
 <!-- ============ SINGLE FOOD NUTRITION CHECKER ============ -->
 <section class="section section--foodcheck" id="foodcheck">
-  <div class="section__head reveal-up">
-    <span class="kicker">01 — Quick Check</span>
-    <h2>Type Any Food, Get Its Full Nutrition</h2>
-    <p>Enter a food item and quantity to see calories, protein, carbs, fat and the full micronutrient panel instantly.</p>
-  </div>
+  <div class="section__inner">
+    <div class="section__head reveal-up">
+      <span class="kicker">01 — Quick check</span>
+      <h2>Type any food, get its full nutrition</h2>
+      <p>Add a food and a quantity to see its calories, protein, carbs and fat. Everything you add stacks up into a running total for the day.</p>
+    </div>
 
-  <div class="fcheck">
-    <form class="fcheck__form tilt-card reveal-up" id="fcheckForm" autocomplete="off" style="--d:1">
-      <div class="fcheck__inputwrap">
-        <input type="text" id="fcheckInput" placeholder="Type a food " />
+    <div class="fcheck">
+      <form class="panel panel--form tilt-card reveal-up" id="fcheckForm" autocomplete="off" style="--d:1">
+        <div class="field">
+          <label for="fcheckInput">Food</label>
+          <input type="text" id="fcheckInput" placeholder="e.g. brown rice, chicken breast" />
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="fcheckQty">Quantity</label>
+            <input type="number" id="fcheckQty" min="1" step="1" value="100" />
+          </div>
+          <div class="field">
+            <label for="fcheckUnit">Unit</label>
+            <select id="fcheckUnit">
+              <option value="g">grams</option>
+              <option value="serving">servings</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--block btn-magnetic">Add to list</button>
+        <p class="field-hint">Data comes from the USDA FoodData Central database.</p>
+      </form>
+
+      <div class="panel panel--result tilt-card reveal-up" id="fcheckResult" style="--d:2">
+        <p id="searchMsg" role="status" aria-live="polite"></p>
+
+        <div class="table-scroll">
+          <table id="foodTable">
+            <thead>
+              <tr>
+                <th scope="col">Food</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Calories</th>
+                <th scope="col">Protein</th>
+                <th scope="col">Carbs</th>
+                <th scope="col">Fat</th>
+                <th scope="col"><span class="sr-only">Remove</span></th>
+              </tr>
+            </thead>
+            <tbody id="foodTableBody"></tbody>
+          </table>
+        </div>
+
+        <p class="fcheck__empty" id="fcheckEmpty">Nothing added yet. Your list will build up here.</p>
+
+        <div class="food-total">
+          <div class="stat">
+            <b><span id="totalCalories">0</span></b>
+            <span>Calories (kcal)</span>
+          </div>
+          <div class="stat">
+            <b><span id="totalProtein">0</span></b>
+            <span>Protein (g)</span>
+          </div>
+          <div class="stat">
+            <b><span id="totalCarbs">0</span></b>
+            <span>Carbs (g)</span>
+          </div>
+          <div class="stat">
+            <b><span id="totalFat">0</span></b>
+            <span>Fat (g)</span>
+          </div>
+        </div>
       </div>
-       <input
-    type="number"
-    id="fcheckQty"
-    min="1"
-    value="100">
-      <select id="fcheckUnit">
-  <option value="g">grams</option>
-  <option value="serving">servings</option>
-</select>
-      <button type="submit" class="btn btn--primary btn-magnetic">Check Nutrition</button>
-    </form>
-     <div class="fcheck__result tilt-card reveal-up" id="fcheckResult" style="--d:2">
-       <div id="searchMsg"></div>
-  <div class="table-scroll">
-  <table id="foodTable">
-    <thead>
-     <tr>
-  <th>Food</th>
-  <th>Qty</th>
-  <th>Calories</th>
-  <th>Protein</th>
-  <th>Carbs</th>
-  <th>Fat</th>
-  <th>Remove</th>
-</tr>
-    </thead>
-    <tbody id="foodTableBody"></tbody>
-  </table>
-  </div>
-
- <div class="food-total">
-  <h3>Total Calories:
-    <span id="totalCalories">0</span> kcal
-  </h3>
-
-  <h3>Total Protein:
-    <span id="totalProtein">0</span> g
-  </h3>
-
-  <h3>Total Carbs:
-    <span id="totalCarbs">0</span> g
-  </h3>
-
-  <h3>Total Fat:
-    <span id="totalFat">0</span> g
-  </h3>
-</div>
     </div>
   </div>
 </section>
 
-<section class="section" id="bmi">
-
-  <div class="section__head reveal-up">
-    <span class="kicker">
-      02 — Body Metrics
-    </span>
-
-    <h2>Calculate Your BMI</h2>
-  </div>
-
-  <div class="calc">
-
-    <form id="bmiForm"
-          class="calc__form tilt-card reveal-up" style="--d:1">
-
-      <label>
-        Height (cm)
-        <input type="number"
-               id="bmiHeight"
-               required>
-      </label>
-
-      <label>
-        Weight (kg)
-        <input type="number"
-               id="bmiWeight"
-               required>
-      </label>
-
-      <button
-        class="btn btn--primary btn-magnetic"
-        type="submit">
-        Calculate BMI
-      </button>
-
-    </form>
-
-    <div
-      class="calc__result tilt-card reveal-up"
-      id="bmiResult" style="--d:2">
-
-      <div class="calc__placeholder">
-        Enter height and weight.
-      </div>
-
+<!-- ============ BMI ============ -->
+<section class="section section--bmi" id="bmi">
+  <div class="section__inner">
+    <div class="section__head reveal-up">
+      <span class="kicker">02 — Body metrics</span>
+      <h2>Calculate your BMI</h2>
+      <p>A quick weight-to-height ratio. It's a rough screen, not a verdict — it doesn't know the difference between muscle and fat.</p>
     </div>
 
-  </div>
+    <div class="calc">
+      <form id="bmiForm" class="panel panel--form tilt-card reveal-up" style="--d:1">
+        <div class="field">
+          <label for="bmiHeight">Height (cm)</label>
+          <input type="number" id="bmiHeight" min="100" max="230" value="170" required>
+        </div>
 
+        <div class="field">
+          <label for="bmiWeight">Weight (kg)</label>
+          <input type="number" id="bmiWeight" min="30" max="220" step="0.1" value="68" required>
+        </div>
+
+        <button class="btn btn--primary btn--block btn-magnetic" type="submit">Calculate BMI</button>
+      </form>
+
+      <div class="panel panel--result tilt-card reveal-up" id="bmiResult" style="--d:2">
+        <div class="panel__placeholder">
+          <p>Enter your height and weight to see where you land on the scale.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- ============ DIET CALCULATOR ============ -->
 <section class="section section--calc" id="calculator">
-  <div class="section__head reveal-up">
-    <span class="kicker">03 — Daily Target</span>
-    <h2>Your Diet, Calculated Properly</h2>
-  </div>
+  <div class="section__inner">
+    <div class="section__head reveal-up">
+      <span class="kicker">03 — Daily target</span>
+      <h2>Your diet, calculated properly</h2>
+      <p>Mifflin-St Jeor for your baseline burn, adjusted for how often you train and what you're aiming for.</p>
+    </div>
 
-  <div class="calc">
-    <form class="calc__form tilt-card reveal-up" id="calcForm" style="--d:1">
-      <div class="calc__row">
-        <label>Gender
-          <select name="gender">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
+    <div class="calc">
+      <form class="panel panel--form tilt-card reveal-up" id="calcForm" style="--d:1">
+        <div class="field-row">
+          <div class="field">
+            <label for="calcGender">Gender</label>
+            <select id="calcGender" name="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="calcAge">Age (years)</label>
+            <input type="number" id="calcAge" name="age" min="10" max="90" value="24" required />
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="calcHeight">Height (cm)</label>
+            <input type="number" id="calcHeight" name="height" min="100" max="230" value="170" required />
+          </div>
+          <div class="field">
+            <label for="calcWeight">Weight (kg)</label>
+            <input type="number" id="calcWeight" name="weight" min="30" max="220" value="68" step="0.1" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="calcActivity">Activity level</label>
+          <select id="calcActivity" name="activity">
+            <option value="1.2">Sedentary — desk job, no training</option>
+            <option value="1.375">Light — trains 1–3 days a week</option>
+            <option value="1.55" selected>Moderate — trains 4–5 days a week</option>
+            <option value="1.725">Heavy — trains 6–7 days a week</option>
+            <option value="1.9">Athlete — twice-a-day training</option>
           </select>
-        </label>
-        <label>Age (years)
-          <input type="number" name="age" min="10" max="90" value="24" required />
-        </label>
-      </div>
-      <div class="calc__row">
-        <label>Height (cm)
-          <input type="number" name="height" min="100" max="230" value="170" required />
-        </label>
-        <label>Weight (kg)
-          <input type="number" name="weight" min="30" max="220" value="68" step="0.1" required />
-        </label>
-      </div>
-      <label>Activity Level
-        <select name="activity">
-          <option value="1.2">Sedentary — desk job, no training</option>
-          <option value="1.375">Light — trains 1–3 days/week</option>
-          <option value="1.55" selected>Moderate — trains 4–5 days/week</option>
-          <option value="1.725">Heavy — trains 6–7 days/week</option>
-          <option value="1.9">Athlete — twice-a-day training</option>
-        </select>
-      </label>
-      <label>Goal
-        <select name="goal">
-          <option value="lose">Fat Loss</option>
-          <option value="maintain" selected>Maintain</option>
-          <option value="gain">Muscle Gain</option>
-        </select>
-      </label>
-      <button type="submit" class="btn btn--primary calc__submit btn-magnetic">Calculate</button>
-    </form>
-    
-    <div class="calc__result tilt-card reveal-up" id="calcResult" style="--d:2">
-      <div class="calc__placeholder">
-        <p>Fill the form and hit <strong>Calculate</strong> — your daily calorie target, macro split, and water/fibre targets will appear here.</p>
+        </div>
+
+        <div class="field">
+          <label for="calcGoal">Goal</label>
+          <select id="calcGoal" name="goal">
+            <option value="lose">Fat loss</option>
+            <option value="maintain" selected>Maintain</option>
+            <option value="gain">Muscle gain</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--block btn-magnetic">Calculate</button>
+      </form>
+
+      <div class="panel panel--result tilt-card reveal-up" id="calcResult" style="--d:2">
+        <div class="panel__placeholder">
+          <p>Fill in the form to see your daily calorie target, macro split and water and fibre goals.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- ============ FOOTER ============ -->
 <footer class="footer">
   <div class="footer__glow" aria-hidden="true"></div>
-  <div class="footer__top">
-    <div class="footer__brand">
-      <img src="logo.png" alt="Body Craft Gym" />
-      <div>
-        <strong>BODY CRAFT</strong>
-        <span>Trabsform your Physique</span>
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="logo.png" alt="" />
+        <div>
+          <strong>BODY CRAFT</strong>
+          <span>Transform your physique</span>
+        </div>
       </div>
+      <ul class="footer__links">
+        <li><a href="#foodcheck">Food checker</a></li>
+        <li><a href="#bmi">BMI calculator</a></li>
+        <li><a href="#calculator">Diet calculator</a></li>
+      </ul>
     </div>
-  </div>
-  <div class="footer__bottom">
-    <span>© <span id="year"></span> NutriTrack Pro</span>
-    <span>Web developed by <strong>Royston J Dcunha</strong></span>
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> NutriTrack Pro</span>
+      <span>Web developed by <strong>Royston J Dcunha</strong></span>
+    </div>
   </div>
 </footer>
 
